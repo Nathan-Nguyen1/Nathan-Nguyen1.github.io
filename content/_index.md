@@ -12,9 +12,9 @@ images:
 - img/revoir.jpg
 show_action_link: true
 show_social_links: true
-subtitle: A Hugo theme you'll want to hang out with
+subtitle: Public Health Data Analyst
 text_align_left: false
-title: Hugo Apéro
+title: Nathan Nguyen
 type: home
 ---
 
