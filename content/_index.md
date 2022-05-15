@@ -13,7 +13,7 @@ images:
 show_action_link: true
 show_social_links: true
 subtitle: Public Health Data Analyst
-text_align_left: true
+text_align_left: false
 title: Nathan Nguyen
 type: home
 ---
