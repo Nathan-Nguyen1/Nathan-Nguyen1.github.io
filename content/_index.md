@@ -9,7 +9,7 @@ description: Sit down, relax, and get to know Hugo Apéro. Built on top of Blogo
   layouts that help you introduce yourself online.
 image_left: true
 images:
-- img/revoir.jpg
+- img/cat4.jpg
 show_action_link: true
 show_social_links: true
 subtitle: Public Health Data Analyst
