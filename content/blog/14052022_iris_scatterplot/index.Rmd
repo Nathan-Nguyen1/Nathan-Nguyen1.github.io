@@ -1,0 +1,32 @@
+---
+title: "Scatterplot with Linear Trend Demonstration"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+excerpt: A simple demonstration of a scatterplot with linear trends.
+output:
+  code_folding: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(ggsci)
+```
+
+# Making a scatterplot with a linear trend
+I'll use the built-in Iris dataset for this demonstration
+
+```{r featured, eval = TRUE, echo = TRUE, message = FALSE, warning = FALSE}
+attach(iris)
+data <- iris
+
+data %>%
+  ggplot(aes(x = Sepal.Width, y = Sepal.Length, group = Species)) +
+  geom_point(aes(color = Species)) +
+  geom_smooth(aes(color = Species), method = "lm", se = FALSE) +
+  scale_color_d3() +
+  labs(x = "Sepal Width",
+       y = "Sepal Length",
+       title = "Relationship between Sepal Length and Sepal Width by Species") +
+  theme(legend.position = "bottom")
+```
+
