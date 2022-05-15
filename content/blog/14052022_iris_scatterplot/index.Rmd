@@ -10,6 +10,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 library(ggsci)
+library(ggpubr)
 ```
 
 # Making a scatterplot with a linear trend
@@ -29,4 +30,26 @@ data %>%
        title = "Relationship between Sepal Length and Sepal Width by Species") +
   theme(legend.position = "bottom")
 ```
+
+Although there is exists somewhat of a linear relationship between `Sepal Length` and `Sepal Width`, the plot looks a little cluttered. Let's take a look at the scatter-plot for each species by creating one plot for each species. We'll use the `facet_wrap()` call with ggplot. The relationship looks strongest for the setosa species and weakest for the virginica species. An individual plot will help to determine this.
+
+```{r, eval = TRUE, echo = TRUE, message = FALSE, warning = FALSE, fig.width = 12}
+data %>%
+  ggplot(aes(x = Sepal.Width, y = Sepal.Length)) +
+  geom_point(color = "dodgerblue3") +
+  geom_smooth(method = "lm", se = FALSE) +
+  facet_wrap(~Species)
+```
+
+```{r, eval = TRUE, echo = TRUE, message = FALSE, warning = FALSE, fig.width = 12}
+# using library(ggpubr) we can add the linear trend data easily
+ggscatter(
+  data = data, x = "Sepal.Width", y = "Sepal.Length",
+  color = "Species", add = "reg.line"
+) +
+  facet_wrap(~Species) +
+  stat_cor(label.y = 7.8) +
+  stat_regline_equation(label.y = 7.5)
+```
+
 
