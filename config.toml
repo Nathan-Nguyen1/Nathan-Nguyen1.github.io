@@ -94,6 +94,10 @@ enableEmoji = true
       icon      = "linkedin"
       icon_pack = "fab"
       url       = "https://www.linkedin.com/in/nathan-nguyen-891b01187/"
+  [[params.social]]
+      icon      = "salesforce"
+      icon_pack = "fab"
+      url       = "https://public.tableau.com/app/profile/nathan.nguyen4469#!/"
  # [[params.social]]
  #     icon      = "facebook-square" # icon name without the 'fa-'
  #     icon_pack = "fab"
