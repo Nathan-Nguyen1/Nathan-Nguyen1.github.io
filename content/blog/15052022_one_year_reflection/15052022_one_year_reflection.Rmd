@@ -1,0 +1,11 @@
+---
+title: "One year ago, I graduated from college"
+date: "16 May 2022"
+excerpt: "Reflecting on what's it like post-grad
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
