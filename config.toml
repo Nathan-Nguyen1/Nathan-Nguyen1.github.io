@@ -89,7 +89,7 @@ enableEmoji = true
   [[params.social]]
       icon      = "github" # icon name without the 'fa-'
       icon_pack = "fab"
-      url       = "https://github.com/Nathan-Nguyen1"
+      url       = "https://github.com/loafing-cat"
   [[params.social]]
       icon      = "linkedin"
       icon_pack = "fab"
