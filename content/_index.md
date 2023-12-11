@@ -2,8 +2,7 @@
 action_label: Read More &rarr;
 action_link: /about
 action_type: text
-description:  Welcome! This is still a work in progress, so you'll find that it is sparse with not much content on it.
-  I'm hoping to write more and to include some small projects as well as some R and Python tutorials over time.
+description: Welcome! <br><br> This site is a work in progress, so you'll find that it's sparse with not much content. I'm hoping to push some small R/Python projects and tutorials over time. <br><br> I'm currently doing analytics work in higher education, and before that I was doing COVID-19 vaccine analytics work at a health department.
 image_left: true
 images:
 - img/cat1_resized.png
