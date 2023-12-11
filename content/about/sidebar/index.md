@@ -7,12 +7,12 @@ show_social_links: true # specify social accounts in site config
 # audio_link_label: "How to say my name" # leave blank to exclude
 link_list_label: "Interests" # bookmarks, elsewhere, etc.
 link_list:
-- name: The Internet of Blockchains
-  url: https://cosmos.network/
+- name: "Bitcoin: A Peer-to-Peer Electronic Cash System"
+  url: https://bitcoin.org/bitcoin.pdf
 - name: Modern Finance
   url: https://modern.finance/
-- name: People
-  url: https://en.wikipedia.org/wiki/People
+- name: The Network State
+  url: https://thenetworkstate.com/
 ---
 
 ** index doesn't contain a body, just front matter above.
