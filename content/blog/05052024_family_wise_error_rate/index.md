@@ -36,7 +36,8 @@ fwer_data %>%
        subtitle = "Simulated for 500 Hypothesis Tests",
        x = "Number of Hypotheses",
        y = "Family-Wise Error Rate",
-       color = expression(alpha-level)) +
+       color = expression(alpha-level),
+       caption = "Figure inspired by An Introduction to Statistical Learning") +
   theme_bw() +
   geom_hline(yintercept = 0.05, linetype = "dashed", color = "black") +
   scale_x_log10(breaks = c(1, 5, 10, 50, 100, 500),
