@@ -22,7 +22,7 @@ library(plotly)
 
 The code below is a simulation of the FWER for various $\alpha$-levels and 500 hundred hypothesis tests.
 
-```{r featured, eval = TRUE, echo = FALSE, message = FALSE, warning = FALSE}
+```{r featured, eval = TRUE, echo = TRUE, message = FALSE, warning = FALSE}
 # define number of hypothesis tests
 num_tests <- 1:500
 
