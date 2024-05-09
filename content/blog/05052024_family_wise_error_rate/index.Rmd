@@ -14,10 +14,12 @@ library(ggsci)
 library(ggpubr)
 library(ggsci)
 library(scales)
+library(reactable)
+# library(htmltools)
 ```
 
-# Making a scatterplot with a linear trend
-I'll use the built-in Iris dataset for this demonstration
+# Simulating the Family Wise Error Rate (FWER) for various $\alpha$-levels
+The code below is a simulation of the FWER for various $\alpha$-levels and 500 hundred hypothesis tests.
 
 ```{r featured, eval = TRUE, echo = TRUE, message = FALSE, warning = FALSE}
 # define number of hypothesis tests
@@ -50,3 +52,16 @@ fwer_data %>%
   scale_x_log10(breaks = c(1, 5, 10, 50, 100, 500),
                 labels = c("1", "5", "10", "50", "100", "500"))
 ```
+
+```{r, eval = TRUE, echo = TRUE, message = FALSE, warning = FALSE}
+reactable(
+  fwer_data,
+  columns = list(
+    num_tests = colDef(name = "Number of Hypothesis Tests"),
+    alpha = colDef(name = "\u03B1-level"), # unicode for the alpha character
+    fwer = colDef(name = "Family-Wise Error Rate")
+  ),
+  filterable = TRUE
+)
+```
+
