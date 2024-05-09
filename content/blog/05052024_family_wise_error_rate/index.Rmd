@@ -15,7 +15,7 @@ library(ggpubr)
 library(ggsci)
 library(scales)
 library(reactable)
-# library(htmltools)
+library(plotly)
 ```
 
 # Simulating the Family Wise Error Rate (FWER) for various $\alpha$-levels
@@ -52,6 +52,25 @@ fwer_data %>%
   geom_hline(yintercept = 0.05, linetype = "dashed", color = "black") +
   scale_x_log10(breaks = c(1, 5, 10, 50, 100, 500),
                 labels = c("1", "5", "10", "50", "100", "500"))
+```
+
+```{r, eval = TRUE, echo = FALSE, message = FALSE, warning = FALSE}
+p <- fwer_data %>% 
+  ggplot(aes(x = num_tests, y = fwer, color = factor(alpha), group = alpha)) +
+  geom_line() +
+  scale_color_lancet() +
+  # scale_x_log10() +
+  labs(title = "Family-wise Error Rate for Different Significance Levels",
+       subtitle = "Simulated for 500 Hypothesis Tests",
+       x = "Number of Hypotheses",
+       y = "Family-Wise Error Rate",
+       color = expression(alpha-level),
+       caption = "Figure inspired by An Introduction to Statistical Learning") +
+  theme_bw() +
+  geom_hline(yintercept = 0.05, linetype = "dashed", color = "black") +
+  scale_x_log10(breaks = c(1, 5, 10, 50, 100, 500),
+                labels = c("1", "5", "10", "50", "100", "500"))
+ggplotly(p)
 ```
 
 $$
