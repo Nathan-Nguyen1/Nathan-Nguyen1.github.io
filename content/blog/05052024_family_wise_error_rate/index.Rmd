@@ -19,6 +19,7 @@ library(reactable)
 ```
 
 # Simulating the Family Wise Error Rate (FWER) for various $\alpha$-levels
+
 The code below is a simulation of the FWER for various $\alpha$-levels and 500 hundred hypothesis tests.
 
 ```{r featured, eval = TRUE, echo = FALSE, message = FALSE, warning = FALSE}
@@ -53,6 +54,14 @@ fwer_data %>%
                 labels = c("1", "5", "10", "50", "100", "500"))
 ```
 
+$$
+\begin{aligned}
+FWER &= 1 - (1-\alpha)^{m}
+\end{aligned}
+$$
+
+Where $m$ is the total number of tests performed, and $\alpha$ is the significance level.
+
 ```{r, eval = TRUE, echo = TRUE, message = FALSE, warning = FALSE}
 reactable(
   fwer_data,
@@ -64,4 +73,3 @@ reactable(
   filterable = TRUE
 )
 ```
-

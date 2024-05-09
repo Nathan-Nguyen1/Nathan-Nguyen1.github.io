@@ -20,6 +20,14 @@ The code below is a simulation of the FWER for various `\(\alpha\)`-levels and 5
 
 <img src="{{< blogdown/postref >}}index_files/figure-html/featured-1.png" width="672" />
 
+$$
+`\begin{aligned}
+FWER &= 1 - (1-\alpha)^{m}
+\end{aligned}`
+$$
+
+Where `\(m\)` is the total number of tests performed, and `\(\alpha\)` is the significance level.
+
 ``` r
 reactable(
   fwer_data,
